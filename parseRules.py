@@ -95,13 +95,28 @@ def testRules(rules, dataset, K):
     return labels_list  
 
 
-def getAccuracy(dataset, labels_list):
+def getAccuracy(dataset, labels_list, indexes):
     matches = 0
+    matches1 = 0
     for idx, labels in enumerate(labels_list):
         if not labels: continue
+        row_match = 0
+        actual_labels = dataset[idx][ indexes[idx]: ]
+
+        if len(labels) < len(actual_labels):
+            for label in labels:
+                if label in actual_labels: row_match += 1
+            matches1 += row_match/len(labels)
+        else:
+            for actual_label in actual_labels:
+                if actual_label in labels: row_match += 1
+            matches1 += row_match/len(actual_labels)
+
         if labels[0] in dataset[idx]: matches += 1
 
+
     print "Accuracy:", matches/len(labels_list)
+    print "Accuracy by discussed method:", matches1/len(labels_list)
 
 
 def main(argv):
@@ -112,15 +127,16 @@ def main(argv):
     rules = orderRules(rules)
 
     dataset, indexes = readDataset(dataset_path)
-    train_set = dataset[: len(dataset)*6//10]
-    test_set = dataset[len(dataset)*6//10:]
+    train_set = dataset[: len(dataset)*8//10]
+    test_set = dataset[len(dataset)*8//10:]
+    test_indexes = indexes[len(dataset)*8//10:]
 
     pruned_rules = pruneRules(rules, train_set)
     print len(rules), rules[0]
     print len(pruned_rules)
 
     labels_list = testRules(pruned_rules, test_set, K)
-    getAccuracy(test_set, labels_list)
+    getAccuracy(test_set, labels_list, test_indexes)
 
 
 
