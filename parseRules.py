@@ -2,6 +2,9 @@ from __future__ import division
 import re
 import sys
 import timeit
+from sample import split_dataset, split_and_write_dataset
+import subprocess
+
 
 # Read rules produced by the Off-The-Shelf program
 # Skips rules for which consequent is not a label
@@ -11,7 +14,7 @@ def readRules(path):
     f = open(path)
     lines = f.readlines()
     f.close()
-
+    
     rules = []
     for line in lines:
         line = line.split()
@@ -24,12 +27,11 @@ def readRules(path):
             if "(" in l: break
             rule[1].append( int(l) )
             idx += 1
-        
-        if not rule[1]: continue
 
         sup = re.sub( '[(),]', '', line[idx]); rule.append( float(sup) )
         conf = re.sub( '[(),]', '', line[idx + 1]); rule.append( float(conf) )        
         rules.append(rule)
+
 
     return rules
 
@@ -41,14 +43,11 @@ def readDataset(path):
     f.close()
 
     dataset = []
-    indexes = []    
     for line in lines:
         line = map(int, line.split())
-        idx = next(x[0] for x in enumerate(line) if x[1] >= 1156 )
         dataset.append(line)
-        indexes.append(idx)
 
-    return dataset, indexes
+    return dataset
 
 
 # Order rules by confidence
@@ -64,8 +63,8 @@ def isRuleApplicable(rule, row):
     return True
     
 
-# Apply rules on training set and prune them
-def pruneRules(rules, dataset):
+# Apply rules on training set and subsume them
+def subsumeRules(rules, dataset):
     applicableCount = [0]*len(rules)
     
     for i, row in enumerate(dataset):
@@ -90,22 +89,23 @@ def testRules(rules, dataset, K):
         k = K #Only K rules must be applied i.e atmost K labels will generated
         labels = []
         for rule in rules:
-            if k==0: break
             if isRuleApplicable(rule[1], row):
-                k -= 1
                 labels.append(rule[0])
+                k -= 1
+                if not k: break
+
         labels_list.append(labels)
 
     return labels_list  
 
 
-def getAccuracy(dataset, labels_list, indexes):
+def getAccuracy(dataset, labels_list):
     matches = 0
     matches1 = 0
     for idx, labels in enumerate(labels_list):
         if not labels: continue
         row_match = 0
-        actual_labels = dataset[idx][ indexes[idx]: ]
+        actual_labels = [ x for x in dataset[idx] if x>=1156 ]
 
         if len(labels) < len(actual_labels):
             for label in labels:
@@ -127,24 +127,53 @@ def main(argv):
     dataset_path = argv[1]    
     rules_path = argv[2]
     K = 5
+    TEST_PERCENT = 20
+    
+
+    start_time = timeit.default_timer()
+    # Read dataset from transaction file and split
+    dataset = readDataset(dataset_path)
+    train_set, test_set = split_dataset(TEST_PERCENT, dataset)
+    print "Dataset size: ", len(train_set), len(test_set)
+
+    # Write train and test sets
+    split_and_write_dataset(train_set, test_set)
+
+    # Invoke apriori program
+    print ""
+    apriori_command = ['./apriori', '-s2m2', '-c60', '-tr', 'train.csv', rules_path ]
+    print apriori_command
+    subprocess.call(apriori_command)
+    print ""
+
+
     rules = readRules(rules_path)
     rules = orderRules(rules)
-    
-    print "Rules ordered"
+    print "No of rules before ordering:", len(rules)
 
-    dataset, indexes = readDataset(dataset_path)
-    train_set = dataset[: len(dataset)*9//10]
-    test_set = dataset[len(dataset)*9//10:]
-    test_indexes = indexes[len(dataset)*9//10:]
+    labels = set()
+    for rule in rules:
+        labels.add(rule[0])
+    print "Labels before subsuming:", len(labels), labels
 
-    pruned_rules = pruneRules(rules, train_set)
-    print len(rules), rules[0]
-    print len(pruned_rules)
-
-    labels_list = testRules(pruned_rules, test_set, K)
-    getAccuracy(test_set, labels_list, test_indexes)
+    subsume_time = -timeit.default_timer()
+    subsumed_rules = subsumeRules(rules, train_set)
+    print "No of rules after subsuming:", len(subsumed_rules)
+    subsume_time += timeit.default_timer()
+    print "Subsume time", str(subsume_time)
 
 
+    labels = set()
+    for rule in subsumed_rules:
+        labels.add(rule[0])
+    print "Labels after subsuming:", len(labels), labels
+
+
+    labels_list = testRules(subsumed_rules, test_set, K)
+    getAccuracy(test_set, labels_list)
+
+    end_time = timeit.default_timer()
+    print "Total time", str(end_time - start_time)
 
 
 
