@@ -124,8 +124,15 @@ def getAccuracy(dataset, labels_list):
 
 
 def main(argv):
+    if len(argv) < 4:
+        print "Usage: <transaction-file> <support-arg> <confidence-arg>"
+        sys.exit()
+
     dataset_path = argv[1]    
-    rules_path = argv[2]
+    apriori_arg1 = argv[2]
+    apriori_arg2 = argv[3]
+    rules_path = "rules.txt"
+
     K = 5
     TEST_PERCENT = 20
     
@@ -141,7 +148,8 @@ def main(argv):
 
     # Invoke apriori program
     print ""
-    apriori_command = ['./apriori', '-s2m2', '-c60', '-tr', 'train.csv', rules_path ]
+    #apriori_command = ['./apriori', '-s1m2', '-c60', '-tr', 'train.csv', rules_path ]
+    apriori_command = ['./apriori', apriori_arg1, apriori_arg2, '-tr', 'train.csv', rules_path ]
     print apriori_command
     subprocess.call(apriori_command)
     print ""
