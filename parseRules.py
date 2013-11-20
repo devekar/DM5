@@ -24,6 +24,8 @@ def readRules(path):
             if "(" in l: break
             rule[1].append( int(l) )
             idx += 1
+        
+        if not rule[1]: continue
 
         sup = re.sub( '[(),]', '', line[idx]); rule.append( float(sup) )
         conf = re.sub( '[(),]', '', line[idx + 1]); rule.append( float(conf) )        
@@ -68,7 +70,9 @@ def pruneRules(rules, dataset):
     
     for i, row in enumerate(dataset):
         for idx, rule in enumerate(rules):
-            if rule[0] in row and isRuleApplicable(rule[1], row): applicableCount[idx] += 1
+            if rule[0] in row and isRuleApplicable(rule[1], row): 
+                applicableCount[idx] += 1
+                break
         if i%1000==0: print i
 
     rules1 = []
@@ -125,11 +129,13 @@ def main(argv):
     K = 5
     rules = readRules(rules_path)
     rules = orderRules(rules)
+    
+    print "Rules ordered"
 
     dataset, indexes = readDataset(dataset_path)
-    train_set = dataset[: len(dataset)*8//10]
-    test_set = dataset[len(dataset)*8//10:]
-    test_indexes = indexes[len(dataset)*8//10:]
+    train_set = dataset[: len(dataset)*9//10]
+    test_set = dataset[len(dataset)*9//10:]
+    test_indexes = indexes[len(dataset)*9//10:]
 
     pruned_rules = pruneRules(rules, train_set)
     print len(rules), rules[0]
