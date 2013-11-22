@@ -36,7 +36,8 @@ def parseDM(filepath = r'data_matrix.csv'):
 
 
 def write_clusters(clusters):
-	f = open("Kmeans_clusters.txt", "w")
+	file_name = "Kmeans_clusters_" + str(len(clusters)) + ".txt"
+	f = open(file_name, "w")
 	for cluster in clusters:
 		f.write(' '.join(map(str,cluster)))
 		f.write('\n')
