@@ -19,7 +19,11 @@ def read_cluster_indices(cipath):
     f = open(cipath)
     cilines = f.readlines()
     f.close()
-    return cilines
+    ci = []
+    for line in cilines:
+        line = map(int, line.split())
+        ci.append(line)
+    return ci
     
 
 def create_cluster_tms(big_tmpath, cipath):
