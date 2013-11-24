@@ -7,7 +7,6 @@ import subprocess
 
 
 
-RULES_PATH = "rules.tmp"
 APRIORI_INPUT_PATH = "input.tmp"
 TOTAL_ITERATIONS = 5
 K = 5
@@ -155,7 +154,7 @@ def getAccuracy(test_labels_list, predicted_labels_list):
         if not labels: continue
         row_match = 0
         actual_labels = test_labels_list[idx]
-
+    
         if len(labels) < len(actual_labels):
             for label in labels:
                 if label in actual_labels: row_match += 1
@@ -170,13 +169,12 @@ def getAccuracy(test_labels_list, predicted_labels_list):
                 matches += 1
                 break
 
-
     print "Accuracy by one match:", matches/len(predicted_labels_list)
     print "Accuracy by one-to-one matching:", matches1/len(predicted_labels_list)
 
 
 # F-measure 
-def getAccuracyWithVariableK(test_labels_list, predicted_labels_list):
+def getFmeasure(test_labels_list, predicted_labels_list):
     TP = 0; FN = 0; FP = 0;  # F-measure does not require TN, good for us :)
     for idx, labels in enumerate(predicted_labels_list):
         if not labels: continue
@@ -198,12 +196,14 @@ def getAccuracyWithVariableK(test_labels_list, predicted_labels_list):
 def apriori_read_order_subsume( apriori_args, features_list, labels_list ):
 
     # Write transaction matrix for APRIORI program to read
+    APRIORI_INPUT_PATH = "input" + ''.join(apriori_args) + ".tmp"
     with open(APRIORI_INPUT_PATH, "w") as f:
         for frow, lrow in itertools.izip(features_list, labels_list):
             f.write(' '.join(map(str,frow)) + ' ' + ' '.join(map(str,lrow)) + '\n')
 
     # Invoke apriori program
     print ""
+    RULES_PATH = "rules" + ''.join(apriori_args) + ".tmp"
     apriori_command = ['./apriori', '-tr', APRIORI_INPUT_PATH , RULES_PATH ] + apriori_args
     subprocess.call(apriori_command)
     print ""
@@ -214,7 +214,9 @@ def apriori_read_order_subsume( apriori_args, features_list, labels_list ):
     subsume_time = -timeit.default_timer()
     subsumed_rules, uncovered_features_list, uncovered_labels_list = subsumeRules(rules, features_list, labels_list)
     subsume_time += timeit.default_timer()
-    print len(rules), "to", len(subsumed_rules), "| Subsume time:", str(subsume_time)
+    print "#Rules before subsumption: ", len(rules)
+    print "#Rules after subsumption:  ", len(subsumed_rules)
+    print "Subsumption time:", str(subsume_time)
     
     return subsumed_rules, uncovered_features_list, uncovered_labels_list
 
@@ -222,6 +224,7 @@ def apriori_read_order_subsume( apriori_args, features_list, labels_list ):
 
 # Return rules learned from train_set
 def train_phase(train_set, apriori_args):
+    start_time = timeit.default_timer()
     train_features_list, train_labels_list = separateFeaturesAndLabels(train_set)
     subsumed_rules = []
     uncovered_features_list = train_features_list
@@ -237,19 +240,28 @@ def train_phase(train_set, apriori_args):
     labels = set()
     for rule in subsumed_rules: labels.add(rule[0])
     print "No of labels after", iteration, "iterations:", len(labels)
+    
+    end_time = timeit.default_timer()
+    print "Training Time:", str(end_time - start_time)
 
     return subsumed_rules
 
 
 
 def test_phase(test_set, subsumed_rules):
+    start_time = timeit.default_timer()
     test_features_list, test_labels_list = separateFeaturesAndLabels(test_set)
 
     predicted_labels_list = testRules(subsumed_rules, test_features_list)
     getAccuracy(test_labels_list, predicted_labels_list)
+    getFmeasure(test_labels_list, predicted_labels_list)
 
     predicted_labels_list = testRulesWithVariableK(subsumed_rules, test_features_list, test_labels_list)
-    getAccuracyWithVariableK(test_labels_list, predicted_labels_list)
+    getAccuracy(test_labels_list, predicted_labels_list)
+    getFmeasure(test_labels_list, predicted_labels_list)
+    
+    end_time = timeit.default_timer()
+    print "Testing Time:", str(end_time - start_time)
 
 
 

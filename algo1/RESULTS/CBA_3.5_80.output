@@ -1,0 +1,47 @@
+./apriori - find frequent item sets with the apriori algorithm
+version 6.5 (2013.11.12)         (c) 1996-2013   Christian Borgelt
+reading input-s3.5m3-c80.tmp ... [1272 item(s), 9044 transaction(s)] done [0.01s].
+filtering, sorting and recoding items ... [347 item(s)] done [0.00s].
+sorting and reducing transactions ... [8665/9044 transaction(s)] done [0.01s].
+writing rules-s3.5m3-c80.tmp ... [20263 rule(s)] done [0.23s].
+./apriori - find frequent item sets with the apriori algorithm
+version 6.5 (2013.11.12)         (c) 1996-2013   Christian Borgelt
+reading input-s3.5m3-c80.tmp ... [1269 item(s), 4610 transaction(s)] done [0.01s].
+filtering, sorting and recoding items ... [453 item(s)] done [0.00s].
+sorting and reducing transactions ... [4418/4610 transaction(s)] done [0.00s].
+writing rules-s3.5m3-c80.tmp ... [251 rule(s)] done [0.06s].
+./apriori - find frequent item sets with the apriori algorithm
+version 6.5 (2013.11.12)         (c) 1996-2013   Christian Borgelt
+reading input-s3.5m3-c80.tmp ... [1260 item(s), 3780 transaction(s)] done [0.00s].
+filtering, sorting and recoding items ... [427 item(s)] done [0.00s].
+sorting and reducing transactions ... [3631/3780 transaction(s)] done [0.00s].
+writing rules-s3.5m3-c80.tmp ... [114 rule(s)] done [0.04s].
+Train size: 9044 | Test Size: 2261
+
+
+#Rules before subsumption:  2658
+#Rules after subsumption:   411
+Subsumption time: 7.29423213005
+Dataset uncovered: 4610
+
+
+#Rules before subsumption:  17
+#Rules after subsumption:   12
+Subsumption time: 0.0286140441895
+Dataset uncovered: 3780
+
+
+#Rules before subsumption:  0
+#Rules after subsumption:   0
+Subsumption time: 0.00353097915649
+Dataset uncovered: 3780
+No of labels after 3 iterations: 5
+Training Time: 8.41564893723
+Accuracy by one match: 0.556390977444
+Accuracy by one-to-one matching: 0.552852720035
+F-measure:  0.758786422349
+Accuracy by one match: 0.564352056612
+Accuracy by one-to-one matching: 0.559708093764
+F-measure:  0.742476851852
+Testing Time: 2.56416010857
+Total Execution Time: 11.2973480225

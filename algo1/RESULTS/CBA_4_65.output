@@ -1,0 +1,47 @@
+./apriori - find frequent item sets with the apriori algorithm
+version 6.5 (2013.11.12)         (c) 1996-2013   Christian Borgelt
+reading input-s4m3-c65.tmp ... [1272 item(s), 9044 transaction(s)] done [0.01s].
+filtering, sorting and recoding items ... [379 item(s)] done [0.00s].
+sorting and reducing transactions ... [8675/9044 transaction(s)] done [0.01s].
+writing rules-s4m3-c65.tmp ... [19325 rule(s)] done [0.24s].
+./apriori - find frequent item sets with the apriori algorithm
+version 6.5 (2013.11.12)         (c) 1996-2013   Christian Borgelt
+reading input-s4m3-c65.tmp ... [1269 item(s), 4254 transaction(s)] done [0.00s].
+filtering, sorting and recoding items ... [511 item(s)] done [0.00s].
+sorting and reducing transactions ... [4075/4254 transaction(s)] done [0.01s].
+writing rules-s4m3-c65.tmp ... [3783 rule(s)] done [0.09s].
+./apriori - find frequent item sets with the apriori algorithm
+version 6.5 (2013.11.12)         (c) 1996-2013   Christian Borgelt
+reading input-s4m3-c65.tmp ... [1253 item(s), 2917 transaction(s)] done [0.00s].
+filtering, sorting and recoding items ... [438 item(s)] done [0.00s].
+sorting and reducing transactions ... [2797/2917 transaction(s)] done [0.00s].
+writing rules-s4m3-c65.tmp ... [545 rule(s)] done [0.03s].
+Train size: 9044 | Test Size: 2261
+
+
+#Rules before subsumption:  1856
+#Rules after subsumption:   381
+Subsumption time: 5.13672494888
+Dataset uncovered: 4254
+
+
+#Rules before subsumption:  61
+#Rules after subsumption:   43
+Subsumption time: 0.0670790672302
+Dataset uncovered: 2917
+
+
+#Rules before subsumption:  0
+#Rules after subsumption:   0
+Subsumption time: 0.00258302688599
+Dataset uncovered: 2917
+No of labels after 3 iterations: 7
+Training Time: 6.14870905876
+Accuracy by one match: 0.637328615657
+Accuracy by one-to-one matching: 0.623507297656
+F-measure:  0.675487465181
+Accuracy by one match: 0.665192392747
+Accuracy by one-to-one matching: 0.646594427245
+F-measure:  0.651499043164
+Testing Time: 2.49964499474
+Total Execution Time: 8.97851800919

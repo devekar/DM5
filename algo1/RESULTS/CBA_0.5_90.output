@@ -1,0 +1,74 @@
+./apriori - find frequent item sets with the apriori algorithm
+version 6.5 (2013.11.12)         (c) 1996-2013   Christian Borgelt
+reading input-s0.5m3-c90.tmp ... [1272 item(s), 9044 transaction(s)] done [0.02s].
+filtering, sorting and recoding items ... [1156 item(s)] done [0.00s].
+sorting and reducing transactions ... [8806/9044 transaction(s)] done [0.00s].
+writing rules-s0.5m3-c90.tmp ... [2260135 rule(s)] done [8.43s].
+./apriori - find frequent item sets with the apriori algorithm
+version 6.5 (2013.11.12)         (c) 1996-2013   Christian Borgelt
+reading input-s0.5m3-c90.tmp ... [1250 item(s), 2441 transaction(s)] done [0.00s].
+filtering, sorting and recoding items ... [1134 item(s)] done [0.00s].
+sorting and reducing transactions ... [2350/2441 transaction(s)] done [0.00s].
+writing rules-s0.5m3-c90.tmp ... [25318616 rule(s)] done [38.12s].
+./apriori - find frequent item sets with the apriori algorithm
+version 6.5 (2013.11.12)         (c) 1996-2013   Christian Borgelt
+reading input-s0.5m3-c90.tmp ... [1241 item(s), 1327 transaction(s)] done [0.00s].
+filtering, sorting and recoding items ... [1112 item(s)] done [0.00s].
+sorting and reducing transactions ... [1293/1327 transaction(s)] done [0.00s].
+writing rules-s0.5m3-c90.tmp ... 
+./apriori: write error on file rules-s0.5m3-c90.tmp
+./apriori - find frequent item sets with the apriori algorithm
+version 6.5 (2013.11.12)         (c) 1996-2013   Christian Borgelt
+reading input-s0.5m3-c90.tmp ... [1238 item(s), 1080 transaction(s)] done [0.00s].
+filtering, sorting and recoding items ... [1101 item(s)] done [0.00s].
+sorting and reducing transactions ... [1060/1080 transaction(s)] done [0.00s].
+writing rules-s0.5m3-c90.tmp ... 
+./apriori: write error on file rules-s0.5m3-c90.tmp
+./apriori - find frequent item sets with the apriori algorithm
+version 6.5 (2013.11.12)         (c) 1996-2013   Christian Borgelt
+reading input-s0.5m3-c90.tmp ... [1237 item(s), 982 transaction(s)] done [0.00s].
+filtering, sorting and recoding items ... [1084 item(s)] done [0.00s].
+sorting and reducing transactions ... [967/982 transaction(s)] done [0.00s].
+writing rules-s0.5m3-c90.tmp ... 
+./apriori: write error on file rules-s0.5m3-c90.tmp
+Train size: 9044 | Test Size: 2261
+
+
+#Rules before subsumption:  298611
+#Rules after subsumption:   2484
+Subsumption time: 889.677487135
+Dataset uncovered: 2441
+
+
+#Rules before subsumption:  209820
+#Rules after subsumption:   408
+Subsumption time: 147.997230053
+Dataset uncovered: 1327
+
+
+#Rules before subsumption:  2101
+#Rules after subsumption:   75
+Subsumption time: 0.622020959854
+Dataset uncovered: 1080
+
+
+#Rules before subsumption:  102
+#Rules after subsumption:   20
+Subsumption time: 0.0253489017487
+Dataset uncovered: 982
+
+
+#Rules before subsumption:  819
+#Rules after subsumption:   33
+Subsumption time: 0.180366039276
+Dataset uncovered: 871
+No of labels after 5 iterations: 44
+Training Time: 1855.91729188
+Accuracy by one match: 0.823087129589
+Accuracy by one-to-one matching: 0.813209494324
+F-measure:  0.787277984304
+Accuracy by one match: 0.837682441398
+Accuracy by one-to-one matching: 0.822630104673
+F-measure:  0.750093388121
+Testing Time: 16.4218330383
+Total Execution Time: 1872.6509409

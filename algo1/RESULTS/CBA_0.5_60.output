@@ -1,0 +1,49 @@
+./apriori - find frequent item sets with the apriori algorithm
+version 6.5 (2013.11.12)         (c) 1996-2013   Christian Borgelt
+reading input-s0.5m3-c60.tmp ... [1272 item(s), 9044 transaction(s)] done [0.01s].
+filtering, sorting and recoding items ... [1178 item(s)] done [0.00s].
+sorting and reducing transactions ... [8806/9044 transaction(s)] done [0.01s].
+writing rules-s0.5m3-c60.tmp ... [8251014 rule(s)] done [27.46s].
+./apriori - find frequent item sets with the apriori algorithm
+version 6.5 (2013.11.12)         (c) 1996-2013   Christian Borgelt
+reading input-s0.5m3-c60.tmp ... [1218 item(s), 1072 transaction(s)] done [0.00s].
+filtering, sorting and recoding items ... [1109 item(s)] done [0.00s].
+sorting and reducing transactions ... [1044/1072 transaction(s)] done [0.00s].
+writing rules-s0.5m3-c60.tmp ... 
+./apriori: write error on file rules-s0.5m3-c60.tmp
+./apriori - find frequent item sets with the apriori algorithm
+version 6.5 (2013.11.12)         (c) 1996-2013   Christian Borgelt
+reading input-s0.5m3-c60.tmp ... [1050 item(s), 261 transaction(s)] done [0.00s].
+filtering, sorting and recoding items ... [1050 item(s)] done [0.00s].
+sorting and reducing transactions ... [258/261 transaction(s)] done [0.00s].
+writing rules-s0.5m3-c60.tmp ... 
+./apriori: not enough memory
+Train size: 9044 | Test Size: 2261
+
+
+#Rules before subsumption:  420285
+#Rules after subsumption:   3052
+Subsumption time: 987.183052063
+Dataset uncovered: 1072
+
+
+#Rules before subsumption:  1030812
+#Rules after subsumption:   451
+Subsumption time: 255.04974103
+Dataset uncovered: 261
+
+
+#Rules before subsumption:  0
+#Rules after subsumption:   0
+Subsumption time: 0.0236489772797
+Dataset uncovered: 261
+No of labels after 3 iterations: 49
+Training Time: 2285.17259717
+Accuracy by one match: 0.863777089783
+Accuracy by one-to-one matching: 0.848444641014
+F-measure:  0.749580458698
+Accuracy by one match: 0.890756302521
+Accuracy by one-to-one matching: 0.862220151218
+F-measure:  0.629687278902
+Testing Time: 18.2569391727
+Total Execution Time: 2303.74247479

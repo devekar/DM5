@@ -1,0 +1,47 @@
+./apriori - find frequent item sets with the apriori algorithm
+version 6.5 (2013.11.12)         (c) 1996-2013   Christian Borgelt
+reading input-s4m3-c90.tmp ... [1272 item(s), 9044 transaction(s)] done [0.01s].
+filtering, sorting and recoding items ... [264 item(s)] done [0.01s].
+sorting and reducing transactions ... [8608/9044 transaction(s)] done [0.00s].
+writing rules-s4m3-c90.tmp ... [9274 rule(s)] done [0.15s].
+./apriori - find frequent item sets with the apriori algorithm
+version 6.5 (2013.11.12)         (c) 1996-2013   Christian Borgelt
+reading input-s4m3-c90.tmp ... [1272 item(s), 5592 transaction(s)] done [0.01s].
+filtering, sorting and recoding items ... [353 item(s)] done [0.00s].
+sorting and reducing transactions ... [5376/5592 transaction(s)] done [0.01s].
+writing rules-s4m3-c90.tmp ... [15 rule(s)] done [0.04s].
+./apriori - find frequent item sets with the apriori algorithm
+version 6.5 (2013.11.12)         (c) 1996-2013   Christian Borgelt
+reading input-s4m3-c90.tmp ... [1272 item(s), 5167 transaction(s)] done [0.01s].
+filtering, sorting and recoding items ... [350 item(s)] done [0.00s].
+sorting and reducing transactions ... [4958/5167 transaction(s)] done [0.00s].
+writing rules-s4m3-c90.tmp ... [12 rule(s)] done [0.04s].
+Train size: 9044 | Test Size: 2261
+
+
+#Rules before subsumption:  1737
+#Rules after subsumption:   307
+Subsumption time: 4.94874882698
+Dataset uncovered: 5592
+
+
+#Rules before subsumption:  2
+#Rules after subsumption:   2
+Subsumption time: 0.0127217769623
+Dataset uncovered: 5167
+
+
+#Rules before subsumption:  0
+#Rules after subsumption:   0
+Subsumption time: 0.00469422340393
+Dataset uncovered: 5167
+No of labels after 3 iterations: 2
+Training Time: 5.77657485008
+Accuracy by one match: 0.424590888987
+Accuracy by one-to-one matching: 0.424369747899
+F-measure:  0.870311793945
+Accuracy by one match: 0.428571428571
+Accuracy by one-to-one matching: 0.428350287483
+F-measure:  0.865153538051
+Testing Time: 1.92482495308
+Total Execution Time: 8.02081418037

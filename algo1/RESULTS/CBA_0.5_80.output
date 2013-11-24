@@ -1,0 +1,72 @@
+./apriori - find frequent item sets with the apriori algorithm
+version 6.5 (2013.11.12)         (c) 1996-2013   Christian Borgelt
+reading input-s0.5m3-c80.tmp ... [1272 item(s), 9044 transaction(s)] done [0.01s].
+filtering, sorting and recoding items ... [1164 item(s)] done [0.00s].
+sorting and reducing transactions ... [8806/9044 transaction(s)] done [0.01s].
+writing rules-s0.5m3-c80.tmp ... [3416020 rule(s)] done [12.31s].
+./apriori - find frequent item sets with the apriori algorithm
+version 6.5 (2013.11.12)         (c) 1996-2013   Christian Borgelt
+reading input-s0.5m3-c80.tmp ... [1236 item(s), 1742 transaction(s)] done [0.00s].
+filtering, sorting and recoding items ... [1121 item(s)] done [0.00s].
+sorting and reducing transactions ... [1682/1742 transaction(s)] done [0.00s].
+writing rules-s0.5m3-c80.tmp ... [27968873 rule(s)] done [38.53s].
+./apriori - find frequent item sets with the apriori algorithm
+version 6.5 (2013.11.12)         (c) 1996-2013   Christian Borgelt
+reading input-s0.5m3-c80.tmp ... [1210 item(s), 815 transaction(s)] done [0.00s].
+filtering, sorting and recoding items ... [1051 item(s)] done [0.00s].
+sorting and reducing transactions ... [805/815 transaction(s)] done [0.00s].
+writing rules-s0.5m3-c80.tmp ... [919294 rule(s)] done [1.69s].
+./apriori - find frequent item sets with the apriori algorithm
+version 6.5 (2013.11.12)         (c) 1996-2013   Christian Borgelt
+reading input-s0.5m3-c80.tmp ... [1132 item(s), 411 transaction(s)] done [0.00s].
+filtering, sorting and recoding items ... [979 item(s)] done [0.00s].
+sorting and reducing transactions ... [406/411 transaction(s)] done [0.00s].
+writing rules-s0.5m3-c80.tmp ... [7842353 rule(s)] done [8.35s].
+./apriori - find frequent item sets with the apriori algorithm
+version 6.5 (2013.11.12)         (c) 1996-2013   Christian Borgelt
+reading input-s0.5m3-c80.tmp ... [1014 item(s), 250 transaction(s)] done [0.00s].
+filtering, sorting and recoding items ... [1014 item(s)] done [0.00s].
+sorting and reducing transactions ... [250 transaction(s)] done [0.00s].
+writing rules-s0.5m3-c80.tmp ... 
+./apriori: write error on file rules-s0.5m3-c80.tmp
+Train size: 9044 | Test Size: 2261
+
+
+#Rules before subsumption:  333403
+#Rules after subsumption:   2776
+Subsumption time: 926.248372078
+Dataset uncovered: 1742
+
+
+#Rules before subsumption:  110226
+#Rules after subsumption:   437
+Subsumption time: 49.2846310139
+Dataset uncovered: 815
+
+
+#Rules before subsumption:  8034
+#Rules after subsumption:   187
+Subsumption time: 0.976162910461
+Dataset uncovered: 411
+
+
+#Rules before subsumption:  13547
+#Rules after subsumption:   72
+Subsumption time: 1.26761817932
+Dataset uncovered: 250
+
+
+#Rules before subsumption:  134665
+#Rules after subsumption:   101
+Subsumption time: 8.97447705269
+Dataset uncovered: 88
+No of labels after 5 iterations: 61
+Training Time: 1489.14445996
+Accuracy by one match: 0.869526758072
+Accuracy by one-to-one matching: 0.854636591479
+F-measure:  0.746691176471
+Accuracy by one match: 0.896063688633
+Accuracy by one-to-one matching: 0.867138881071
+F-measure:  0.569745100551
+Testing Time: 18.5587990284
+Total Execution Time: 1508.21842098

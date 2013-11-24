@@ -1,0 +1,71 @@
+./apriori - find frequent item sets with the apriori algorithm
+version 6.5 (2013.11.12)         (c) 1996-2013   Christian Borgelt
+reading input-s1.5m3-c70.tmp ... [1272 item(s), 9044 transaction(s)] done [0.02s].
+filtering, sorting and recoding items ... [818 item(s)] done [0.00s].
+sorting and reducing transactions ... [8779/9044 transaction(s)] done [0.00s].
+writing rules-s1.5m3-c70.tmp ... [238585 rule(s)] done [1.26s].
+./apriori - find frequent item sets with the apriori algorithm
+version 6.5 (2013.11.12)         (c) 1996-2013   Christian Borgelt
+reading input-s1.5m3-c70.tmp ... [1246 item(s), 2498 transaction(s)] done [0.00s].
+filtering, sorting and recoding items ... [879 item(s)] done [0.00s].
+sorting and reducing transactions ... [2411/2498 transaction(s)] done [0.00s].
+writing rules-s1.5m3-c70.tmp ... [41806 rule(s)] done [0.25s].
+./apriori - find frequent item sets with the apriori algorithm
+version 6.5 (2013.11.12)         (c) 1996-2013   Christian Borgelt
+reading input-s1.5m3-c70.tmp ... [1236 item(s), 1510 transaction(s)] done [0.00s].
+filtering, sorting and recoding items ... [815 item(s)] done [0.00s].
+sorting and reducing transactions ... [1462/1510 transaction(s)] done [0.00s].
+writing rules-s1.5m3-c70.tmp ... [20752 rule(s)] done [0.10s].
+./apriori - find frequent item sets with the apriori algorithm
+version 6.5 (2013.11.12)         (c) 1996-2013   Christian Borgelt
+reading input-s1.5m3-c70.tmp ... [1229 item(s), 1100 transaction(s)] done [0.00s].
+filtering, sorting and recoding items ... [771 item(s)] done [0.00s].
+sorting and reducing transactions ... [1068/1100 transaction(s)] done [0.00s].
+writing rules-s1.5m3-c70.tmp ... [17623 rule(s)] done [0.07s].
+./apriori - find frequent item sets with the apriori algorithm
+version 6.5 (2013.11.12)         (c) 1996-2013   Christian Borgelt
+reading input-s1.5m3-c70.tmp ... [1227 item(s), 1016 transaction(s)] done [0.00s].
+filtering, sorting and recoding items ... [760 item(s)] done [0.00s].
+sorting and reducing transactions ... [996/1016 transaction(s)] done [0.00s].
+writing rules-s1.5m3-c70.tmp ... [14248 rule(s)] done [0.05s].
+Train size: 9044 | Test Size: 2261
+
+
+#Rules before subsumption:  23199
+#Rules after subsumption:   1218
+Subsumption time: 58.2533128262
+Dataset uncovered: 2498
+
+
+#Rules before subsumption:  720
+#Rules after subsumption:   134
+Subsumption time: 0.306715965271
+Dataset uncovered: 1510
+
+
+#Rules before subsumption:  169
+#Rules after subsumption:   67
+Subsumption time: 0.0539228916168
+Dataset uncovered: 1100
+
+
+#Rules before subsumption:  31
+#Rules after subsumption:   9
+Subsumption time: 0.00936198234558
+Dataset uncovered: 1016
+
+
+#Rules before subsumption:  3
+#Rules after subsumption:   2
+Subsumption time: 0.00232291221619
+Dataset uncovered: 992
+No of labels after 5 iterations: 28
+Training Time: 62.3599290848
+Accuracy by one match: 0.821318000885
+Accuracy by one-to-one matching: 0.799130178387
+F-measure:  0.721142857143
+Accuracy by one match: 0.856700574967
+Accuracy by one-to-one matching: 0.830229986732
+F-measure:  0.671979183607
+Testing Time: 7.927120924
+Total Execution Time: 70.6035618782

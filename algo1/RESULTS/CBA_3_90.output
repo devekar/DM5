@@ -1,0 +1,47 @@
+./apriori - find frequent item sets with the apriori algorithm
+version 6.5 (2013.11.12)         (c) 1996-2013   Christian Borgelt
+reading input-s3m3-c90.tmp ... [1272 item(s), 9044 transaction(s)] done [0.02s].
+filtering, sorting and recoding items ... [360 item(s)] done [0.00s].
+sorting and reducing transactions ... [8670/9044 transaction(s)] done [0.00s].
+writing rules-s3m3-c90.tmp ... [21613 rule(s)] done [0.24s].
+./apriori - find frequent item sets with the apriori algorithm
+version 6.5 (2013.11.12)         (c) 1996-2013   Christian Borgelt
+reading input-s3m3-c90.tmp ... [1271 item(s), 5178 transaction(s)] done [0.01s].
+filtering, sorting and recoding items ... [462 item(s)] done [0.00s].
+sorting and reducing transactions ... [4984/5178 transaction(s)] done [0.00s].
+writing rules-s3m3-c90.tmp ... [66 rule(s)] done [0.06s].
+./apriori - find frequent item sets with the apriori algorithm
+version 6.5 (2013.11.12)         (c) 1996-2013   Christian Borgelt
+reading input-s3m3-c90.tmp ... [1269 item(s), 4770 transaction(s)] done [0.01s].
+filtering, sorting and recoding items ... [448 item(s)] done [0.00s].
+sorting and reducing transactions ... [4580/4770 transaction(s)] done [0.00s].
+writing rules-s3m3-c90.tmp ... [47 rule(s)] done [0.05s].
+Train size: 9044 | Test Size: 2261
+
+
+#Rules before subsumption:  3846
+#Rules after subsumption:   442
+Subsumption time: 10.4834859371
+Dataset uncovered: 5178
+
+
+#Rules before subsumption:  6
+#Rules after subsumption:   4
+Subsumption time: 0.0154480934143
+Dataset uncovered: 4770
+
+
+#Rules before subsumption:  0
+#Rules after subsumption:   0
+Subsumption time: 0.00439500808716
+Dataset uncovered: 4770
+No of labels after 3 iterations: 4
+Training Time: 11.497699976
+Accuracy by one match: 0.465723131358
+Accuracy by one-to-one matching: 0.464838567006
+F-measure:  0.852644327816
+Accuracy by one match: 0.470145953118
+Accuracy by one-to-one matching: 0.46881910659
+F-measure:  0.847713717694
+Testing Time: 2.74562597275
+Total Execution Time: 14.5564961433
