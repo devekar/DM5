@@ -37,7 +37,7 @@ def split_dataset(test_percent, dm_full, tm):
 def write_train_test_files(train_indices, test_indices, dm, tm):
 	title_lines = []
 	title_lines.append(dm.pop(0))
-	title_lines.append(dm.pop(1))
+	title_lines.append(dm.pop(0))
 	train_file = open("dm_train.csv", "w")
 	train_file.write(title_lines[0])
 	train_file.write(title_lines[1])

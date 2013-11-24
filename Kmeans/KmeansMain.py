@@ -7,7 +7,7 @@ import csv
 import sys
 from Kmeans import KMeans
 
-def parseDM(filepath = r'data_matrix.csv'):
+def parseDM(filepath = r'dm_train.csv'):
     dataMatrix = []
 
     matrix = []
