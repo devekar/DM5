@@ -9,7 +9,7 @@ import subprocess
 
 RULES_PATH = "rules.tmp"
 APRIORI_INPUT_PATH = "input.tmp"
-TOTAL_ITERATIONS = 10
+TOTAL_ITERATIONS = 5
 K = 5
 
 
@@ -96,6 +96,7 @@ def subsumeRules(rules, features_list, labels_list):
                 transactionsCovered[i] = True
                 break
 
+    # Create a list of rules which covered transaction, disregard ones which did not
     subsumed_rules = []
     for idx, flag in enumerate(applicableCount):
         if flag: subsumed_rules.append( rules[idx] )
@@ -146,6 +147,7 @@ def testRulesWithVariableK(rules, test_feature_set, test_labels_list):
     return labels_list  
 
 
+# Accuracy method for K-rules testing
 def getAccuracy(test_labels_list, predicted_labels_list):
     matches = 0
     matches1 = 0
@@ -195,6 +197,7 @@ def getAccuracyWithVariableK(test_labels_list, predicted_labels_list):
 # Run the apriori program, read the rules produced, order it and then subsume
 def apriori_read_order_subsume( apriori_args, features_list, labels_list ):
 
+    # Write transaction matrix for APRIORI program to read
     with open(APRIORI_INPUT_PATH, "w") as f:
         for frow, lrow in itertools.izip(features_list, labels_list):
             f.write(' '.join(map(str,frow)) + ' ' + ' '.join(map(str,lrow)) + '\n')
@@ -217,6 +220,7 @@ def apriori_read_order_subsume( apriori_args, features_list, labels_list ):
 
 
 
+# Return rules learned from train_set
 def train_phase(train_set, apriori_args):
     train_features_list, train_labels_list = separateFeaturesAndLabels(train_set)
     subsumed_rules = []
@@ -229,7 +233,6 @@ def train_phase(train_set, apriori_args):
         apriori_read_order_subsume( apriori_args, uncovered_features_list, uncovered_labels_list )
         subsumed_rules += subsumed_rules_temp
         print "Dataset uncovered:", len(uncovered_features_list)
-
 
     labels = set()
     for rule in subsumed_rules: labels.add(rule[0])
