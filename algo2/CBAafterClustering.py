@@ -4,6 +4,7 @@ import sys
 import timeit
 import itertools
 import subprocess
+import cluster_code as cc
 from cluster_tm import create_cluster_tms
 
 
@@ -176,7 +177,7 @@ def getAccuracy(test_labels_list, predicted_labels_list):
 
 
 # F-measure 
-def getAccuracyWithVariableK(test_labels_list, predicted_labels_list):
+def getFmeasure(test_labels_list, predicted_labels_list):
     TP = 0; FN = 0; FP = 0;  # F-measure does not require TN, good for us :)
     for idx, labels in enumerate(predicted_labels_list):
         if not labels: continue
@@ -214,7 +215,9 @@ def apriori_read_order_subsume( apriori_args, features_list, labels_list ):
     subsume_time = -timeit.default_timer()
     subsumed_rules, uncovered_features_list, uncovered_labels_list = subsumeRules(rules, features_list, labels_list)
     subsume_time += timeit.default_timer()
-    print len(rules), "to", len(subsumed_rules), "| Subsume time:", str(subsume_time)
+    print "#Rules before subsumption: ", len(rules)
+    print "#Rules after subsumption:  ", len(subsumed_rules)
+    print "Subsumption time:", str(subsume_time)
     
     return subsumed_rules, uncovered_features_list, uncovered_labels_list
 
@@ -236,21 +239,36 @@ def train_phase(train_set, apriori_args):
 
     labels = set()
     for rule in subsumed_rules: labels.add(rule[0])
-    print "No of labels after", iteration, "iterations:", len(labels)
+    print "\nNo of labels after", iteration, "iterations:", len(labels)
 
     return subsumed_rules
 
 
 
-def test_phase(test_set, subsumed_rules):
+def test_phase(test_set, subsumed_rules_clusters, cluster_tms):
+    cluster_means = []
+    for cluster_tm in cluster_tms:
+        tm, labels_list = separateFeaturesAndLabels(cluster_tm)
+        cluster_means.append( cc.get_representative_means(tm) )
+
     test_features_list, test_labels_list = separateFeaturesAndLabels(test_set)
+    test_features_clusters, test_labels_clusters = cc.cluster_test_set(test_features_list, test_labels_list, cluster_means)
 
-    predicted_labels_list = testRules(subsumed_rules, test_features_list)
-    getAccuracy(test_labels_list, predicted_labels_list)
+    for idx in range(len(test_features_clusters)):
+        test_features_list = test_features_clusters[idx]
+        test_labels_list = test_labels_clusters[idx]
+        subsumed_rules = subsumed_rules_clusters[idx]
 
-    predicted_labels_list = testRulesWithVariableK(subsumed_rules, test_features_list, test_labels_list)
-    getAccuracyWithVariableK(test_labels_list, predicted_labels_list)
+        print "\nCluster Index:", idx
+        predicted_labels_list = testRules(subsumed_rules, test_features_list)
+        getAccuracy(test_labels_list, predicted_labels_list)
+        getFmeasure(test_labels_list, predicted_labels_list)
 
+        predicted_labels_list = testRulesWithVariableK(subsumed_rules, test_features_list, test_labels_list)
+        getAccuracy(test_labels_list, predicted_labels_list)
+        getFmeasure(test_labels_list, predicted_labels_list)
+
+    print ""
 
 
 
@@ -266,23 +284,25 @@ def main(argv):
     else: apriori_args = [ "-s3m3", "-c80" ]
 
      
-
-
     start_time = timeit.default_timer()
     whole_train_set = readDataset(train_path) 
     test_set = readDataset(test_path) 
     cluster_tms = create_cluster_tms(train_path, cipath)
     print "Train size:", len(whole_train_set), "| Test Size:", len(test_set)
 
-    clusters_subsumed_rules = []
-    for idx, train_set in enumerate(cluster_tms):
-        subsumed_rules = train_phase(train_set, apriori_args)
-        clusters_subsumed_rules.append(subsumed_rules)
 
-    for c in clusters_subsumed_rules: print len(c)
-    sys.exit()     # TODO: remove
+    start_time = timeit.default_timer()
+    subsumed_rules_clusters = []                                    # Train
+    for idx, train_set in enumerate(cluster_tms):                   #
+        subsumed_rules = train_phase(train_set, apriori_args)       #
+        subsumed_rules_clusters.append(subsumed_rules)              #
+    end_time = timeit.default_timer()
+    print "Training Time:", str(end_time - start_time), "\n"
 
-    test_phase(test_set, subsumed_rules)
+    start_time = timeit.default_timer()
+    test_phase(test_set, subsumed_rules_clusters, cluster_tms)      # Test
+    end_time = timeit.default_timer()
+    print "Testing Time:", str(end_time - start_time), "\n"
 
     end_time = timeit.default_timer()
     print "Total Execution Time:", str(end_time - start_time)

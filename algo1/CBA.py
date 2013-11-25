@@ -224,7 +224,6 @@ def apriori_read_order_subsume( apriori_args, features_list, labels_list ):
 
 # Return rules learned from train_set
 def train_phase(train_set, apriori_args):
-    start_time = timeit.default_timer()
     train_features_list, train_labels_list = separateFeaturesAndLabels(train_set)
     subsumed_rules = []
     uncovered_features_list = train_features_list
@@ -239,29 +238,26 @@ def train_phase(train_set, apriori_args):
 
     labels = set()
     for rule in subsumed_rules: labels.add(rule[0])
-    print "No of labels after", iteration, "iterations:", len(labels)
+    print "\nNo of labels after", iteration, "iterations:", len(labels)
     
-    end_time = timeit.default_timer()
-    print "Training Time:", str(end_time - start_time)
-
     return subsumed_rules
 
 
 
 def test_phase(test_set, subsumed_rules):
-    start_time = timeit.default_timer()
     test_features_list, test_labels_list = separateFeaturesAndLabels(test_set)
 
+    print "Performance with K =", K, ":"
     predicted_labels_list = testRules(subsumed_rules, test_features_list)
     getAccuracy(test_labels_list, predicted_labels_list)
     getFmeasure(test_labels_list, predicted_labels_list)
+    print ""
 
+    print "Performance with varying number of predictions:"
     predicted_labels_list = testRulesWithVariableK(subsumed_rules, test_features_list, test_labels_list)
     getAccuracy(test_labels_list, predicted_labels_list)
     getFmeasure(test_labels_list, predicted_labels_list)
-    
-    end_time = timeit.default_timer()
-    print "Testing Time:", str(end_time - start_time)
+    print ""
 
 
 
@@ -282,8 +278,15 @@ def main(argv):
     test_set = readDataset(test_path) 
     print "Train size:", len(train_set), "| Test Size:", len(test_set)
 
-    subsumed_rules = train_phase(train_set, apriori_args)
-    test_phase(test_set, subsumed_rules)
+    start_time = timeit.default_timer()
+    subsumed_rules = train_phase(train_set, apriori_args)   # Train
+    end_time = timeit.default_timer()
+    print "Training Time:", str(end_time - start_time), "\n"
+
+    start_time = timeit.default_timer()
+    test_phase(test_set, subsumed_rules)                    # Test
+    end_time = timeit.default_timer()
+    print "Testing Time:", str(end_time - start_time), "\n"
 
     end_time = timeit.default_timer()
     print "Total Execution Time:", str(end_time - start_time)
