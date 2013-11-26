@@ -254,19 +254,26 @@ def test_phase(test_set, subsumed_rules_clusters, cluster_tms):
     test_features_list, test_labels_list = separateFeaturesAndLabels(test_set)
     test_features_clusters, test_labels_clusters = cc.cluster_test_set(test_features_list, test_labels_list, cluster_means)
 
+    predicted_labels_list1 = []
+    predicted_labels_list2 = []
+    test_labels_list_comb = []
     for idx in range(len(test_features_clusters)):
         test_features_list = test_features_clusters[idx]
         test_labels_list = test_labels_clusters[idx]
+        test_labels_list_comb += test_labels_list
         subsumed_rules = subsumed_rules_clusters[idx]
 
-        print "\nCluster Index:", idx
         predicted_labels_list = testRules(subsumed_rules, test_features_list)
-        getAccuracy(test_labels_list, predicted_labels_list)
-        getFmeasure(test_labels_list, predicted_labels_list)
+        predicted_labels_list1 += predicted_labels_list
 
         predicted_labels_list = testRulesWithVariableK(subsumed_rules, test_features_list, test_labels_list)
-        getAccuracy(test_labels_list, predicted_labels_list)
-        getFmeasure(test_labels_list, predicted_labels_list)
+        predicted_labels_list2 += predicted_labels_list
+        
+    getAccuracy(test_labels_list_comb, predicted_labels_list1)
+    getFmeasure(test_labels_list_comb, predicted_labels_list1)
+    
+    getAccuracy(test_labels_list_comb, predicted_labels_list2)
+    getFmeasure(test_labels_list_comb, predicted_labels_list2)
 
     print ""
 
