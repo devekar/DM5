@@ -69,15 +69,15 @@ for i in xrange(len(lines)/4):
 
 
 f = open("graph_input.dat", "w")
-s = "Support Confidence Acc1 Acc2 Acc3 Acc4 Fmeasure1 Fmeasure2 TrainTime TestTime\n"
+s = "Support\tConfidence\tAcc1\tAcc2\tAcc3\tAcc4\tFmeasure1\tFmeasure2\tTrainTime\tTestTime\n"
 f.write(s)
 for sup in dic: 
 	for conf in dic[sup]:
 		#print sup, conf, dic[sup][conf]
 		d = dic[sup][conf]
-		s = str(sup) + " " + str(conf) + " " + str(d['acc1']) + " " + str(d['acc2']) + " "
-		s += str(d['acc3']) + " " + str(d['acc4']) + " " + str(d['fm1']) + " " + str(d['fm2'])
-		s += " " + str(d['trainTime']) + " " + str(d['testTime']) + "\n"
+		s = str(sup) + "\t" + str(conf) + "\t" + str(d['acc1']) + "\t" + str(d['acc2']) + "\t"
+		s += str(d['acc3']) + "\t" + str(d['acc4']) + "\t" + str(d['fm1']) + "\t" + str(d['fm2'])
+		s += "\t" + str(d['trainTime']) + "\t" + str(d['testTime']) + "\n"
 		f.write(s)
 
 
