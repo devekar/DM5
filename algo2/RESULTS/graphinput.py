@@ -2,7 +2,6 @@
 def split_supconf(filename):
 	a = filename[4:len(filename)-7]
 	a = a.split('_')
-    print a
 	sup = float(a[0])
 	conf = int(a[1])
 	return sup, conf

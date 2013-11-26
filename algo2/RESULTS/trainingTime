@@ -54,4 +54,3 @@ CBA_9_85_16.output:Training Time: 15.1783931255
 CBA_9_85_8.output:Training Time: 7.00273013115 
 CBA_9_90_16.output:Training Time: 14.8425130844 
 CBA_9_90_8.output:Training Time: 6.94526910782 
-grep.sh:grep "Training Time" * > trainingTime

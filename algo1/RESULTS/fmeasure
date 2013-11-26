@@ -54,4 +54,3 @@ CBA_9_85.output:F-measure:  0.453219315895
 CBA_9_85.output:F-measure:  0.441997063142
 CBA_9_90.output:F-measure:  0.381525006832
 CBA_9_90.output:F-measure:  0.381525006832
-grep.sh:grep "F-measure" * > fmeasure

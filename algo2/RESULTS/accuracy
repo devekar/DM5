@@ -222,4 +222,3 @@ CBA_9_90_8.output:Accuracy by one match: 0.620964175144
 CBA_9_90_8.output:Accuracy by one-to-one matching: 0.620521892968
 CBA_9_90_8.output:Accuracy by one match: 0.628482972136
 CBA_9_90_8.output:Accuracy by one-to-one matching: 0.626345274952
-grep.sh:grep "Accuracy" * > accuracy

@@ -26,4 +26,3 @@ CBA_9_75.output:Testing Time: 0.569296121597
 CBA_9_80.output:Testing Time: 0.528336048126 
 CBA_9_85.output:Testing Time: 0.497059106827 
 CBA_9_90.output:Testing Time: 0.46616101265 
-grep.sh:grep "Testing Time" * > testingTime
