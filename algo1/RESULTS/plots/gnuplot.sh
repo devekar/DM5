@@ -12,6 +12,9 @@ set dgrid 7,8
 #set dgrid 30, 30
 set pm3d
 set hidden3d
+set terminal png size 400,300
+set output "myplot.png"
 splot "graph_input.dat" every ::1 u 1:2:10 notitle with lines
 
-pause -1
+
+
