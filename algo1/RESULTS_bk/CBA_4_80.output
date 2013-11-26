@@ -1,0 +1,54 @@
+./apriori - find frequent item sets with the apriori algorithm
+version 6.5 (2013.11.12)         (c) 1996-2013   Christian Borgelt
+reading input-s4m3-c80.tmp ... [1272 item(s), 9044 transaction(s)] done [0.01s].
+filtering, sorting and recoding items ... [303 item(s)] done [0.01s].
+sorting and reducing transactions ... [8626/9044 transaction(s)] done [0.00s].
+writing rules-s4m3-c80.tmp ... [13232 rule(s)] done [0.18s].
+./apriori - find frequent item sets with the apriori algorithm
+version 6.5 (2013.11.12)         (c) 1996-2013   Christian Borgelt
+reading input-s4m3-c80.tmp ... [1271 item(s), 4800 transaction(s)] done [0.01s].
+filtering, sorting and recoding items ... [396 item(s)] done [0.00s].
+sorting and reducing transactions ... [4598/4800 transaction(s)] done [0.00s].
+writing rules-s4m3-c80.tmp ... [77 rule(s)] done [0.05s].
+./apriori - find frequent item sets with the apriori algorithm
+version 6.5 (2013.11.12)         (c) 1996-2013   Christian Borgelt
+reading input-s4m3-c80.tmp ... [1271 item(s), 4343 transaction(s)] done [0.00s].
+filtering, sorting and recoding items ... [375 item(s)] done [0.01s].
+sorting and reducing transactions ... [4171/4343 transaction(s)] done [0.00s].
+writing rules-s4m3-c80.tmp ... [67 rule(s)] done [0.03s].
+Train size: 9044 | Test Size: 2261
+
+
+#Rules before subsumption:  1784
+#Rules after subsumption:   327
+Subsumption time: 5.12191200256
+Dataset uncovered: 4800
+
+
+#Rules before subsumption:  4
+#Rules after subsumption:   4
+Subsumption time: 0.0121450424194
+Dataset uncovered: 4343
+
+
+#Rules before subsumption:  0
+#Rules after subsumption:   0
+Subsumption time: 0.0040168762207
+Dataset uncovered: 4343
+
+No of labels after 3 iterations: 4
+Training Time: 5.95909285545 
+
+Performance with K = 5 :
+Accuracy by one match: 0.509066784609
+Accuracy by one-to-one matching: 0.507518796992
+F-measure:  0.540388667759
+
+Performance with varying number of predictions:
+Accuracy by one match: 0.516585581601
+Accuracy by one-to-one matching: 0.514153029633
+F-measure:  0.53801975649
+
+Testing Time: 2.05814981461 
+
+Total Execution Time: 2.05815792084

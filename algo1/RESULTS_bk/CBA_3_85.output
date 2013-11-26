@@ -1,0 +1,66 @@
+./apriori - find frequent item sets with the apriori algorithm
+version 6.5 (2013.11.12)         (c) 1996-2013   Christian Borgelt
+reading input-s3m3-c85.tmp ... [1272 item(s), 9044 transaction(s)] done [0.01s].
+filtering, sorting and recoding items ... [388 item(s)] done [0.00s].
+sorting and reducing transactions ... [8688/9044 transaction(s)] done [0.01s].
+writing rules-s3m3-c85.tmp ... [25943 rule(s)] done [0.27s].
+./apriori - find frequent item sets with the apriori algorithm
+version 6.5 (2013.11.12)         (c) 1996-2013   Christian Borgelt
+reading input-s3m3-c85.tmp ... [1269 item(s), 4291 transaction(s)] done [0.01s].
+filtering, sorting and recoding items ... [502 item(s)] done [0.00s].
+sorting and reducing transactions ... [4113/4291 transaction(s)] done [0.00s].
+writing rules-s3m3-c85.tmp ... [227 rule(s)] done [0.07s].
+./apriori - find frequent item sets with the apriori algorithm
+version 6.5 (2013.11.12)         (c) 1996-2013   Christian Borgelt
+reading input-s3m3-c85.tmp ... [1261 item(s), 3851 transaction(s)] done [0.00s].
+filtering, sorting and recoding items ... [474 item(s)] done [0.00s].
+sorting and reducing transactions ... [3685/3851 transaction(s)] done [0.01s].
+writing rules-s3m3-c85.tmp ... [215 rule(s)] done [0.07s].
+./apriori - find frequent item sets with the apriori algorithm
+version 6.5 (2013.11.12)         (c) 1996-2013   Christian Borgelt
+reading input-s3m3-c85.tmp ... [1261 item(s), 3747 transaction(s)] done [0.00s].
+filtering, sorting and recoding items ... [478 item(s)] done [0.00s].
+sorting and reducing transactions ... [3586/3747 transaction(s)] done [0.01s].
+writing rules-s3m3-c85.tmp ... [168 rule(s)] done [0.06s].
+Train size: 9044 | Test Size: 2261
+
+
+#Rules before subsumption:  3911
+#Rules after subsumption:   472
+Subsumption time: 10.61267519
+Dataset uncovered: 4291
+
+
+#Rules before subsumption:  7
+#Rules after subsumption:   6
+Subsumption time: 0.014575958252
+Dataset uncovered: 3851
+
+
+#Rules before subsumption:  3
+#Rules after subsumption:   2
+Subsumption time: 0.00916290283203
+Dataset uncovered: 3747
+
+
+#Rules before subsumption:  0
+#Rules after subsumption:   0
+Subsumption time: 0.00322294235229
+Dataset uncovered: 3747
+
+No of labels after 4 iterations: 5
+Training Time: 11.802164793 
+
+Performance with K = 5 :
+Accuracy by one match: 0.5701017249
+Accuracy by one-to-one matching: 0.565162907268
+F-measure:  0.586394557823
+
+Performance with varying number of predictions:
+Accuracy by one match: 0.576293675365
+Accuracy by one-to-one matching: 0.570912575557
+F-measure:  0.581664441478
+
+Testing Time: 2.9377310276 
+
+Total Execution Time: 2.9377450943

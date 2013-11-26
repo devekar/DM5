@@ -1,0 +1,78 @@
+./apriori - find frequent item sets with the apriori algorithm
+version 6.5 (2013.11.12)         (c) 1996-2013   Christian Borgelt
+reading input-s3m3-c75.tmp ... [1272 item(s), 9044 transaction(s)] done [0.01s].
+filtering, sorting and recoding items ... [433 item(s)] done [0.00s].
+sorting and reducing transactions ... [8700/9044 transaction(s)] done [0.01s].
+writing rules-s3m3-c75.tmp ... [33969 rule(s)] done [0.34s].
+./apriori - find frequent item sets with the apriori algorithm
+version 6.5 (2013.11.12)         (c) 1996-2013   Christian Borgelt
+reading input-s3m3-c75.tmp ... [1268 item(s), 4005 transaction(s)] done [0.00s].
+filtering, sorting and recoding items ... [559 item(s)] done [0.00s].
+sorting and reducing transactions ... [3833/4005 transaction(s)] done [0.01s].
+writing rules-s3m3-c75.tmp ... [3998 rule(s)] done [0.12s].
+./apriori - find frequent item sets with the apriori algorithm
+version 6.5 (2013.11.12)         (c) 1996-2013   Christian Borgelt
+reading input-s3m3-c75.tmp ... [1249 item(s), 2845 transaction(s)] done [0.00s].
+filtering, sorting and recoding items ... [486 item(s)] done [0.00s].
+sorting and reducing transactions ... [2731/2845 transaction(s)] done [0.00s].
+writing rules-s3m3-c75.tmp ... [393 rule(s)] done [0.03s].
+./apriori - find frequent item sets with the apriori algorithm
+version 6.5 (2013.11.12)         (c) 1996-2013   Christian Borgelt
+reading input-s3m3-c75.tmp ... [1248 item(s), 2616 transaction(s)] done [0.00s].
+filtering, sorting and recoding items ... [470 item(s)] done [0.00s].
+sorting and reducing transactions ... [2506/2616 transaction(s)] done [0.00s].
+writing rules-s3m3-c75.tmp ... [108 rule(s)] done [0.02s].
+./apriori - find frequent item sets with the apriori algorithm
+version 6.5 (2013.11.12)         (c) 1996-2013   Christian Borgelt
+reading input-s3m3-c75.tmp ... [1248 item(s), 2492 transaction(s)] done [0.00s].
+filtering, sorting and recoding items ... [449 item(s)] done [0.00s].
+sorting and reducing transactions ... [2388/2492 transaction(s)] done [0.00s].
+writing rules-s3m3-c75.tmp ... [129 rule(s)] done [0.02s].
+Train size: 9044 | Test Size: 2261
+
+
+#Rules before subsumption:  4034
+#Rules after subsumption:   535
+Subsumption time: 10.6899149418
+Dataset uncovered: 4005
+
+
+#Rules before subsumption:  92
+#Rules after subsumption:   49
+Subsumption time: 0.0918180942535
+Dataset uncovered: 2845
+
+
+#Rules before subsumption:  3
+#Rules after subsumption:   3
+Subsumption time: 0.00613188743591
+Dataset uncovered: 2616
+
+
+#Rules before subsumption:  2
+#Rules after subsumption:   2
+Subsumption time: 0.00487899780273
+Dataset uncovered: 2492
+
+
+#Rules before subsumption:  1
+#Rules after subsumption:   1
+Subsumption time: 0.0034921169281
+Dataset uncovered: 2420
+
+No of labels after 5 iterations: 12
+Training Time: 12.0564920902 
+
+Performance with K = 5 :
+Accuracy by one match: 0.701901813357
+Accuracy by one-to-one matching: 0.687675070028
+F-measure:  0.640768922707
+
+Performance with varying number of predictions:
+Accuracy by one match: 0.719150818222
+Accuracy by one-to-one matching: 0.701496388029
+F-measure:  0.626228269085
+
+Testing Time: 3.4738638401 
+
+Total Execution Time: 3.47387099266

@@ -1,0 +1,56 @@
+./apriori - find frequent item sets with the apriori algorithm
+version 6.5 (2013.11.12)         (c) 1996-2013   Christian Borgelt
+reading input-s0.5m3-c75.tmp ... [1272 item(s), 9044 transaction(s)] done [0.01s].
+filtering, sorting and recoding items ... [1167 item(s)] done [0.00s].
+sorting and reducing transactions ... [8806/9044 transaction(s)] done [0.01s].
+writing rules-s0.5m3-c75.tmp ... [4209911 rule(s)] done [14.46s].
+./apriori - find frequent item sets with the apriori algorithm
+version 6.5 (2013.11.12)         (c) 1996-2013   Christian Borgelt
+reading input-s0.5m3-c75.tmp ... [1232 item(s), 1471 transaction(s)] done [0.00s].
+filtering, sorting and recoding items ... [1126 item(s)] done [0.00s].
+sorting and reducing transactions ... [1425/1471 transaction(s)] done [0.00s].
+writing rules-s0.5m3-c75.tmp ... 
+./apriori: write error on file rules-s0.5m3-c75.tmp
+./apriori - find frequent item sets with the apriori algorithm
+version 6.5 (2013.11.12)         (c) 1996-2013   Christian Borgelt
+reading input-s0.5m3-c75.tmp ... [1186 item(s), 573 transaction(s)] done [0.00s].
+filtering, sorting and recoding items ... [1036 item(s)] done [0.00s].
+sorting and reducing transactions ... [567/573 transaction(s)] done [0.00s].
+writing rules-s0.5m3-c75.tmp ... 
+./apriori: not enough memory
+Train size: 9044 | Test Size: 2261
+
+
+#Rules before subsumption:  353069
+#Rules after subsumption:   2888
+Subsumption time: 941.135211945
+Dataset uncovered: 1471
+
+
+#Rules before subsumption:  2023771
+#Rules after subsumption:   440
+Subsumption time: 615.230295897
+Dataset uncovered: 573
+
+
+#Rules before subsumption:  0
+#Rules after subsumption:   0
+Subsumption time: 0.00372004508972
+Dataset uncovered: 573
+
+No of labels after 3 iterations: 42
+Training Time: 2125.48579597 
+
+Performance with K = 5 :
+Accuracy by one match: 0.846085802742
+Accuracy by one-to-one matching: 0.833149049093
+F-measure:  0.733855916387
+
+Performance with varying number of predictions:
+Accuracy by one match: 0.869084475896
+Accuracy by one-to-one matching: 0.847162022704
+F-measure:  0.678526048285
+
+Testing Time: 17.5620799065 
+
+Total Execution Time: 17.5620920658

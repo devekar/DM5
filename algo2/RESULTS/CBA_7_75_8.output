@@ -1,0 +1,381 @@
+./apriori - find frequent item sets with the apriori algorithm
+version 6.5 (2013.11.12)         (c) 1996-2013   Christian Borgelt
+reading input-s7m3-c75Kmeans_clusters_8.txt.tmp ... [1208 item(s), 1043 transaction(s)] done [0.00s].
+filtering, sorting and recoding items ... [190 item(s)] done [0.00s].
+sorting and reducing transactions ... [995/1043 transaction(s)] done [0.00s].
+writing rules-s7m3-c75Kmeans_clusters_8.txt.tmp ... [2286 rule(s)] done [0.01s].
+./apriori - find frequent item sets with the apriori algorithm
+version 6.5 (2013.11.12)         (c) 1996-2013   Christian Borgelt
+reading input-s7m3-c75Kmeans_clusters_8.txt.tmp ... [1180 item(s), 564 transaction(s)] done [0.00s].
+filtering, sorting and recoding items ... [176 item(s)] done [0.00s].
+sorting and reducing transactions ... [526/564 transaction(s)] done [0.00s].
+writing rules-s7m3-c75Kmeans_clusters_8.txt.tmp ... [497 rule(s)] done [0.00s].
+./apriori - find frequent item sets with the apriori algorithm
+version 6.5 (2013.11.12)         (c) 1996-2013   Christian Borgelt
+reading input-s7m3-c75Kmeans_clusters_8.txt.tmp ... [1098 item(s), 304 transaction(s)] done [0.00s].
+filtering, sorting and recoding items ... [182 item(s)] done [0.00s].
+sorting and reducing transactions ... [282/304 transaction(s)] done [0.00s].
+writing rules-s7m3-c75Kmeans_clusters_8.txt.tmp ... [224 rule(s)] done [0.00s].
+./apriori - find frequent item sets with the apriori algorithm
+version 6.5 (2013.11.12)         (c) 1996-2013   Christian Borgelt
+reading input-s7m3-c75Kmeans_clusters_8.txt.tmp ... [1075 item(s), 282 transaction(s)] done [0.00s].
+filtering, sorting and recoding items ... [163 item(s)] done [0.00s].
+sorting and reducing transactions ... [258/282 transaction(s)] done [0.00s].
+writing rules-s7m3-c75Kmeans_clusters_8.txt.tmp ... [221 rule(s)] done [0.00s].
+./apriori - find frequent item sets with the apriori algorithm
+version 6.5 (2013.11.12)         (c) 1996-2013   Christian Borgelt
+reading input-s7m3-c75Kmeans_clusters_8.txt.tmp ... [1067 item(s), 233 transaction(s)] done [0.00s].
+filtering, sorting and recoding items ... [173 item(s)] done [0.00s].
+sorting and reducing transactions ... [216/233 transaction(s)] done [0.00s].
+writing rules-s7m3-c75Kmeans_clusters_8.txt.tmp ... [240 rule(s)] done [0.00s].
+./apriori - find frequent item sets with the apriori algorithm
+version 6.5 (2013.11.12)         (c) 1996-2013   Christian Borgelt
+reading input-s7m3-c75Kmeans_clusters_8.txt.tmp ... [1212 item(s), 1285 transaction(s)] done [0.00s].
+filtering, sorting and recoding items ... [329 item(s)] done [0.00s].
+sorting and reducing transactions ... [1247/1285 transaction(s)] done [0.00s].
+writing rules-s7m3-c75Kmeans_clusters_8.txt.tmp ... [716 rule(s)] done [0.02s].
+./apriori - find frequent item sets with the apriori algorithm
+version 6.5 (2013.11.12)         (c) 1996-2013   Christian Borgelt
+reading input-s7m3-c75Kmeans_clusters_8.txt.tmp ... [1197 item(s), 685 transaction(s)] done [0.00s].
+filtering, sorting and recoding items ... [278 item(s)] done [0.00s].
+sorting and reducing transactions ... [664/685 transaction(s)] done [0.00s].
+writing rules-s7m3-c75Kmeans_clusters_8.txt.tmp ... [400 rule(s)] done [0.00s].
+./apriori - find frequent item sets with the apriori algorithm
+version 6.5 (2013.11.12)         (c) 1996-2013   Christian Borgelt
+reading input-s7m3-c75Kmeans_clusters_8.txt.tmp ... [1196 item(s), 595 transaction(s)] done [0.00s].
+filtering, sorting and recoding items ... [257 item(s)] done [0.00s].
+sorting and reducing transactions ... [577/595 transaction(s)] done [0.00s].
+writing rules-s7m3-c75Kmeans_clusters_8.txt.tmp ... [196 rule(s)] done [0.00s].
+./apriori - find frequent item sets with the apriori algorithm
+version 6.5 (2013.11.12)         (c) 1996-2013   Christian Borgelt
+reading input-s7m3-c75Kmeans_clusters_8.txt.tmp ... [1192 item(s), 558 transaction(s)] done [0.00s].
+filtering, sorting and recoding items ... [252 item(s)] done [0.00s].
+sorting and reducing transactions ... [547/558 transaction(s)] done [0.00s].
+writing rules-s7m3-c75Kmeans_clusters_8.txt.tmp ... [115 rule(s)] done [0.00s].
+./apriori - find frequent item sets with the apriori algorithm
+version 6.5 (2013.11.12)         (c) 1996-2013   Christian Borgelt
+reading input-s7m3-c75Kmeans_clusters_8.txt.tmp ... [1171 item(s), 1892 transaction(s)] done [0.00s].
+filtering, sorting and recoding items ... [146 item(s)] done [0.00s].
+sorting and reducing transactions ... [1867/1892 transaction(s)] done [0.00s].
+writing rules-s7m3-c75Kmeans_clusters_8.txt.tmp ... [4280 rule(s)] done [0.03s].
+./apriori - find frequent item sets with the apriori algorithm
+version 6.5 (2013.11.12)         (c) 1996-2013   Christian Borgelt
+reading input-s7m3-c75Kmeans_clusters_8.txt.tmp ... [1089 item(s), 323 transaction(s)] done [0.00s].
+filtering, sorting and recoding items ... [181 item(s)] done [0.00s].
+sorting and reducing transactions ... [312/323 transaction(s)] done [0.00s].
+writing rules-s7m3-c75Kmeans_clusters_8.txt.tmp ... [2303 rule(s)] done [0.00s].
+./apriori - find frequent item sets with the apriori algorithm
+version 6.5 (2013.11.12)         (c) 1996-2013   Christian Borgelt
+reading input-s7m3-c75Kmeans_clusters_8.txt.tmp ... [869 item(s), 146 transaction(s)] done [0.00s].
+filtering, sorting and recoding items ... [123 item(s)] done [0.00s].
+sorting and reducing transactions ... [135/146 transaction(s)] done [0.00s].
+writing rules-s7m3-c75Kmeans_clusters_8.txt.tmp ... [70 rule(s)] done [0.00s].
+./apriori - find frequent item sets with the apriori algorithm
+version 6.5 (2013.11.12)         (c) 1996-2013   Christian Borgelt
+reading input-s7m3-c75Kmeans_clusters_8.txt.tmp ... [839 item(s), 137 transaction(s)] done [0.00s].
+filtering, sorting and recoding items ... [115 item(s)] done [0.00s].
+sorting and reducing transactions ... [126/137 transaction(s)] done [0.00s].
+writing rules-s7m3-c75Kmeans_clusters_8.txt.tmp ... [54 rule(s)] done [0.00s].
+./apriori - find frequent item sets with the apriori algorithm
+version 6.5 (2013.11.12)         (c) 1996-2013   Christian Borgelt
+reading input-s7m3-c75Kmeans_clusters_8.txt.tmp ... [823 item(s), 128 transaction(s)] done [0.00s].
+filtering, sorting and recoding items ... [123 item(s)] done [0.00s].
+sorting and reducing transactions ... [120/128 transaction(s)] done [0.00s].
+writing rules-s7m3-c75Kmeans_clusters_8.txt.tmp ... [109 rule(s)] done [0.00s].
+./apriori - find frequent item sets with the apriori algorithm
+version 6.5 (2013.11.12)         (c) 1996-2013   Christian Borgelt
+reading input-s7m3-c75Kmeans_clusters_8.txt.tmp ... [1131 item(s), 738 transaction(s)] done [0.00s].
+filtering, sorting and recoding items ... [180 item(s)] done [0.00s].
+sorting and reducing transactions ... [703/738 transaction(s)] done [0.00s].
+writing rules-s7m3-c75Kmeans_clusters_8.txt.tmp ... [905 rule(s)] done [0.00s].
+./apriori - find frequent item sets with the apriori algorithm
+version 6.5 (2013.11.12)         (c) 1996-2013   Christian Borgelt
+reading input-s7m3-c75Kmeans_clusters_8.txt.tmp ... [1057 item(s), 311 transaction(s)] done [0.00s].
+filtering, sorting and recoding items ... [160 item(s)] done [0.00s].
+sorting and reducing transactions ... [291/311 transaction(s)] done [0.00s].
+writing rules-s7m3-c75Kmeans_clusters_8.txt.tmp ... [94 rule(s)] done [0.00s].
+./apriori - find frequent item sets with the apriori algorithm
+version 6.5 (2013.11.12)         (c) 1996-2013   Christian Borgelt
+reading input-s7m3-c75Kmeans_clusters_8.txt.tmp ... [1029 item(s), 269 transaction(s)] done [0.00s].
+filtering, sorting and recoding items ... [150 item(s)] done [0.00s].
+sorting and reducing transactions ... [249/269 transaction(s)] done [0.00s].
+writing rules-s7m3-c75Kmeans_clusters_8.txt.tmp ... [31 rule(s)] done [0.00s].
+./apriori - find frequent item sets with the apriori algorithm
+version 6.5 (2013.11.12)         (c) 1996-2013   Christian Borgelt
+reading input-s7m3-c75Kmeans_clusters_8.txt.tmp ... [829 item(s), 1930 transaction(s)] done [0.00s].
+filtering, sorting and recoding items ... [55 item(s)] done [0.00s].
+sorting and reducing transactions ... [1761/1930 transaction(s)] done [0.00s].
+writing rules-s7m3-c75Kmeans_clusters_8.txt.tmp ... [187313 rule(s)] done [0.38s].
+./apriori - find frequent item sets with the apriori algorithm
+version 6.5 (2013.11.12)         (c) 1996-2013   Christian Borgelt
+reading input-s7m3-c75Kmeans_clusters_8.txt.tmp ... [1192 item(s), 678 transaction(s)] done [0.00s].
+filtering, sorting and recoding items ... [199 item(s)] done [0.00s].
+sorting and reducing transactions ... [654/678 transaction(s)] done [0.00s].
+writing rules-s7m3-c75Kmeans_clusters_8.txt.tmp ... [3169 rule(s)] done [0.01s].
+./apriori - find frequent item sets with the apriori algorithm
+version 6.5 (2013.11.12)         (c) 1996-2013   Christian Borgelt
+reading input-s7m3-c75Kmeans_clusters_8.txt.tmp ... [1151 item(s), 520 transaction(s)] done [0.00s].
+filtering, sorting and recoding items ... [145 item(s)] done [0.00s].
+sorting and reducing transactions ... [490/520 transaction(s)] done [0.00s].
+writing rules-s7m3-c75Kmeans_clusters_8.txt.tmp ... [2106 rule(s)] done [0.00s].
+./apriori - find frequent item sets with the apriori algorithm
+version 6.5 (2013.11.12)         (c) 1996-2013   Christian Borgelt
+reading input-s7m3-c75Kmeans_clusters_8.txt.tmp ... [1134 item(s), 410 transaction(s)] done [0.00s].
+filtering, sorting and recoding items ... [150 item(s)] done [0.00s].
+sorting and reducing transactions ... [398/410 transaction(s)] done [0.00s].
+writing rules-s7m3-c75Kmeans_clusters_8.txt.tmp ... [2035 rule(s)] done [0.00s].
+./apriori - find frequent item sets with the apriori algorithm
+version 6.5 (2013.11.12)         (c) 1996-2013   Christian Borgelt
+reading input-s7m3-c75Kmeans_clusters_8.txt.tmp ... [1098 item(s), 357 transaction(s)] done [0.00s].
+filtering, sorting and recoding items ... [138 item(s)] done [0.00s].
+sorting and reducing transactions ... [346/357 transaction(s)] done [0.00s].
+writing rules-s7m3-c75Kmeans_clusters_8.txt.tmp ... [1606 rule(s)] done [0.00s].
+./apriori - find frequent item sets with the apriori algorithm
+version 6.5 (2013.11.12)         (c) 1996-2013   Christian Borgelt
+reading input-s7m3-c75Kmeans_clusters_8.txt.tmp ... [719 item(s), 651 transaction(s)] done [0.00s].
+filtering, sorting and recoding items ... [46 item(s)] done [0.00s].
+sorting and reducing transactions ... [545/651 transaction(s)] done [0.00s].
+writing rules-s7m3-c75Kmeans_clusters_8.txt.tmp ... [26319 rule(s)] done [0.03s].
+./apriori - find frequent item sets with the apriori algorithm
+version 6.5 (2013.11.12)         (c) 1996-2013   Christian Borgelt
+reading input-s7m3-c75Kmeans_clusters_8.txt.tmp ... [1182 item(s), 827 transaction(s)] done [0.00s].
+filtering, sorting and recoding items ... [299 item(s)] done [0.00s].
+sorting and reducing transactions ... [771/827 transaction(s)] done [0.00s].
+writing rules-s7m3-c75Kmeans_clusters_8.txt.tmp ... [40738 rule(s)] done [0.10s].
+./apriori - find frequent item sets with the apriori algorithm
+version 6.5 (2013.11.12)         (c) 1996-2013   Christian Borgelt
+reading input-s7m3-c75Kmeans_clusters_8.txt.tmp ... [1102 item(s), 241 transaction(s)] done [0.00s].
+filtering, sorting and recoding items ... [259 item(s)] done [0.00s].
+sorting and reducing transactions ... [233/241 transaction(s)] done [0.00s].
+writing rules-s7m3-c75Kmeans_clusters_8.txt.tmp ... [2958 rule(s)] done [0.00s].
+./apriori - find frequent item sets with the apriori algorithm
+version 6.5 (2013.11.12)         (c) 1996-2013   Christian Borgelt
+reading input-s7m3-c75Kmeans_clusters_8.txt.tmp ... [1094 item(s), 198 transaction(s)] done [0.00s].
+filtering, sorting and recoding items ... [276 item(s)] done [0.00s].
+sorting and reducing transactions ... [192/198 transaction(s)] done [0.00s].
+writing rules-s7m3-c75Kmeans_clusters_8.txt.tmp ... [7580 rule(s)] done [0.01s].
+./apriori - find frequent item sets with the apriori algorithm
+version 6.5 (2013.11.12)         (c) 1996-2013   Christian Borgelt
+reading input-s7m3-c75Kmeans_clusters_8.txt.tmp ... [1069 item(s), 160 transaction(s)] done [0.00s].
+filtering, sorting and recoding items ... [265 item(s)] done [0.00s].
+sorting and reducing transactions ... [154/160 transaction(s)] done [0.00s].
+writing rules-s7m3-c75Kmeans_clusters_8.txt.tmp ... [2650 rule(s)] done [0.00s].
+./apriori - find frequent item sets with the apriori algorithm
+version 6.5 (2013.11.12)         (c) 1996-2013   Christian Borgelt
+reading input-s7m3-c75Kmeans_clusters_8.txt.tmp ... [1049 item(s), 149 transaction(s)] done [0.00s].
+filtering, sorting and recoding items ... [272 item(s)] done [0.00s].
+sorting and reducing transactions ... [143/149 transaction(s)] done [0.00s].
+writing rules-s7m3-c75Kmeans_clusters_8.txt.tmp ... [1102 rule(s)] done [0.00s].
+Train size: 9044 | Test Size: 2261
+
+CLUSTER INDEX 0
+
+
+#Rules before subsumption:  409
+#Rules after subsumption:   48
+Subsumption time: 0.0694689750671
+Dataset uncovered: 564
+
+
+#Rules before subsumption:  36
+#Rules after subsumption:   21
+Subsumption time: 0.00543594360352
+Dataset uncovered: 304
+
+
+#Rules before subsumption:  2
+#Rules after subsumption:   1
+Subsumption time: 0.000541925430298
+Dataset uncovered: 282
+
+
+#Rules before subsumption:  5
+#Rules after subsumption:   4
+Subsumption time: 0.000723838806152
+Dataset uncovered: 233
+
+
+#Rules before subsumption:  0
+#Rules after subsumption:   0
+Subsumption time: 0.000240087509155
+Dataset uncovered: 233
+
+No of labels after 5 iterations: 8
+
+CLUSTER INDEX 1
+
+
+#Rules before subsumption:  82
+#Rules after subsumption:   39
+Subsumption time: 0.0313749313354
+Dataset uncovered: 685
+
+
+#Rules before subsumption:  3
+#Rules after subsumption:   3
+Subsumption time: 0.00149488449097
+Dataset uncovered: 595
+
+
+#Rules before subsumption:  3
+#Rules after subsumption:   2
+Subsumption time: 0.00114107131958
+Dataset uncovered: 558
+
+
+#Rules before subsumption:  0
+#Rules after subsumption:   0
+Subsumption time: 0.000526905059814
+Dataset uncovered: 558
+
+No of labels after 4 iterations: 5
+
+CLUSTER INDEX 2
+
+
+#Rules before subsumption:  1278
+#Rules after subsumption:   154
+Subsumption time: 0.283100128174
+Dataset uncovered: 323
+
+
+#Rules before subsumption:  493
+#Rules after subsumption:   53
+Subsumption time: 0.0275928974152
+Dataset uncovered: 146
+
+
+#Rules before subsumption:  1
+#Rules after subsumption:   1
+Subsumption time: 0.000277996063232
+Dataset uncovered: 137
+
+
+#Rules before subsumption:  1
+#Rules after subsumption:   1
+Subsumption time: 0.000248908996582
+Dataset uncovered: 128
+
+
+#Rules before subsumption:  1
+#Rules after subsumption:   1
+Subsumption time: 0.000230073928833
+Dataset uncovered: 121
+
+No of labels after 5 iterations: 6
+
+CLUSTER INDEX 3
+
+
+#Rules before subsumption:  165
+#Rules after subsumption:   52
+Subsumption time: 0.0279989242554
+Dataset uncovered: 311
+
+
+#Rules before subsumption:  5
+#Rules after subsumption:   2
+Subsumption time: 0.000920057296753
+Dataset uncovered: 269
+
+
+#Rules before subsumption:  0
+#Rules after subsumption:   0
+Subsumption time: 0.000285148620605
+Dataset uncovered: 269
+
+No of labels after 3 iterations: 4
+
+CLUSTER INDEX 4
+
+
+#Rules before subsumption:  19680
+#Rules after subsumption:   499
+Subsumption time: 3.47986888885
+Dataset uncovered: 14
+
+No of labels after 1 iterations: 1
+
+CLUSTER INDEX 5
+
+
+#Rules before subsumption:  112
+#Rules after subsumption:   14
+Subsumption time: 0.0164108276367
+Dataset uncovered: 520
+
+
+#Rules before subsumption:  6
+#Rules after subsumption:   4
+Subsumption time: 0.00161004066467
+Dataset uncovered: 410
+
+
+#Rules before subsumption:  6
+#Rules after subsumption:   3
+Subsumption time: 0.00134992599487
+Dataset uncovered: 357
+
+
+#Rules before subsumption:  0
+#Rules after subsumption:   0
+Subsumption time: 0.000421047210693
+Dataset uncovered: 357
+
+No of labels after 4 iterations: 7
+
+CLUSTER INDEX 6
+
+
+#Rules before subsumption:  3445
+#Rules after subsumption:   173
+Subsumption time: 0.52238702774
+Dataset uncovered: 49
+
+No of labels after 1 iterations: 1
+
+CLUSTER INDEX 7
+
+
+#Rules before subsumption:  3760
+#Rules after subsumption:   132
+Subsumption time: 0.477836847305
+Dataset uncovered: 241
+
+
+#Rules before subsumption:  3
+#Rules after subsumption:   3
+Subsumption time: 0.000702142715454
+Dataset uncovered: 198
+
+
+#Rules before subsumption:  11
+#Rules after subsumption:   4
+Subsumption time: 0.0011031627655
+Dataset uncovered: 160
+
+
+#Rules before subsumption:  2
+#Rules after subsumption:   2
+Subsumption time: 0.000391006469727
+Dataset uncovered: 149
+
+
+#Rules before subsumption:  0
+#Rules after subsumption:   0
+Subsumption time: 0.000221014022827
+Dataset uncovered: 149
+
+No of labels after 5 iterations: 7
+Training Time: 11.7290217876 
+
+Accuracy by one match: 0.763821318001
+Accuracy by one-to-one matching: 0.759914492113
+F-measure:  0.70304975923
+Accuracy by one match: 0.78505086245
+Accuracy by one-to-one matching: 0.772445820433
+F-measure:  0.669592247212
+
+Testing Time: 9.32340908051 
+
+Total Execution Time: 21.6037261486
