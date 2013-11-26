@@ -1,0 +1,42 @@
+./apriori - find frequent item sets with the apriori algorithm
+version 6.5 (2013.11.12)         (c) 1996-2013   Christian Borgelt
+reading input-s10m3-c60.tmp ... [1272 item(s), 9044 transaction(s)] done [0.01s].
+filtering, sorting and recoding items ... [146 item(s)] done [0.00s].
+sorting and reducing transactions ... [8314/9044 transaction(s)] done [0.01s].
+writing rules-s10m3-c60.tmp ... [1195 rule(s)] done [0.05s].
+./apriori - find frequent item sets with the apriori algorithm
+version 6.5 (2013.11.12)         (c) 1996-2013   Christian Borgelt
+reading input-s10m3-c60.tmp ... [1272 item(s), 5183 transaction(s)] done [0.01s].
+filtering, sorting and recoding items ... [170 item(s)] done [0.00s].
+sorting and reducing transactions ... [4883/5183 transaction(s)] done [0.00s].
+writing rules-s10m3-c60.tmp ... [17 rule(s)] done [0.01s].
+Train size: 9044 | Test Size: 2261
+
+
+#Rules before subsumption:  117
+#Rules after subsumption:   65
+Subsumption time: 0.348489999771
+Dataset uncovered: 5183
+
+
+#Rules before subsumption:  0
+#Rules after subsumption:   0
+Subsumption time: 0.00465893745422
+Dataset uncovered: 5183
+
+No of labels after 2 iterations: 2
+Training Time: 0.822733879089 
+
+Performance with K = 5 :
+Accuracy by one match: 0.417514374171
+Accuracy by one-to-one matching: 0.417514374171
+F-measure:  0.462328767123
+
+Performance with varying number of predictions:
+Accuracy by one match: 0.419283502875
+Accuracy by one-to-one matching: 0.418841220699
+F-measure:  0.454610778443
+
+Testing Time: 0.427706003189 
+
+Total Execution Time: 0.427715063095

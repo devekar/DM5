@@ -180,8 +180,12 @@ def getAccuracy(test_labels_list, predicted_labels_list):
 def getFmeasure(test_labels_list, predicted_labels_list):
     TP = 0; FN = 0; FP = 0;  # F-measure does not require TN, good for us :)
     for idx, labels in enumerate(predicted_labels_list):
-        if not labels: continue
         actual_labels = test_labels_list[idx]
+
+        if not labels: 
+            FN += len(actual_labels)
+            continue
+
 
         TP_temp = 0
         for label in labels:
@@ -196,7 +200,7 @@ def getFmeasure(test_labels_list, predicted_labels_list):
 
 
 # Run the apriori program, read the rules produced, order it and then subsume
-def apriori_read_order_subsume( apriori_args, features_list, labels_list, cipath ):
+def apriori_read_order_subsume( apriori_args, features_list, labels_list, cipath):
 
     # Write transaction matrix for APRIORI program to read
     APRIORI_INPUT_PATH = "input" + ''.join(apriori_args) + cipath + ".tmp"
@@ -232,7 +236,7 @@ def train_phase(train_set, apriori_args, cipath):
     uncovered_features_list = train_features_list
     uncovered_labels_list = train_labels_list
     iteration = 0; prev_len = 0
-    while len(uncovered_features_list) > 100 and len(uncovered_features_list)!= prev_len and iteration < TOTAL_ITERATIONS:
+    while len(uncovered_features_list) > 50 and len(uncovered_features_list)!= prev_len and iteration < TOTAL_ITERATIONS:
         iteration += 1; prev_len = len(uncovered_features_list)
         subsumed_rules_temp, uncovered_features_list, uncovered_labels_list = \
         apriori_read_order_subsume( apriori_args, uncovered_features_list, uncovered_labels_list, cipath )
@@ -293,7 +297,7 @@ def main(argv):
     else: apriori_args = [ "-s3m3", "-c80" ]
 
      
-    start_time = timeit.default_timer()
+    start_time1 = timeit.default_timer()
     whole_train_set = readDataset(train_path) 
     test_set = readDataset(test_path) 
     cluster_tms = create_cluster_tms(train_path, cipath)
@@ -302,7 +306,8 @@ def main(argv):
 
     start_time = timeit.default_timer()
     subsumed_rules_clusters = []                                    # Train
-    for idx, train_set in enumerate(cluster_tms):                   #
+    for idx, train_set in enumerate(cluster_tms):
+        print "\nCLUSTER INDEX", idx                   #
         subsumed_rules = train_phase(train_set, apriori_args, cipath)       #
         subsumed_rules_clusters.append(subsumed_rules)              #
     end_time = timeit.default_timer()
@@ -313,8 +318,8 @@ def main(argv):
     end_time = timeit.default_timer()
     print "Testing Time:", str(end_time - start_time), "\n"
 
-    end_time = timeit.default_timer()
-    print "Total Execution Time:", str(end_time - start_time)
+    end_time1 = timeit.default_timer()
+    print "Total Execution Time:", str(end_time1 - start_time1)
 
 
 
