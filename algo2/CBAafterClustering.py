@@ -196,15 +196,17 @@ def getFmeasure(test_labels_list, predicted_labels_list):
 
 
 # Run the apriori program, read the rules produced, order it and then subsume
-def apriori_read_order_subsume( apriori_args, features_list, labels_list ):
+def apriori_read_order_subsume( apriori_args, features_list, labels_list, cipath ):
 
     # Write transaction matrix for APRIORI program to read
+    APRIORI_INPUT_PATH = "input" + ''.join(apriori_args) + cipath + ".tmp"
     with open(APRIORI_INPUT_PATH, "w") as f:
         for frow, lrow in itertools.izip(features_list, labels_list):
             f.write(' '.join(map(str,frow)) + ' ' + ' '.join(map(str,lrow)) + '\n')
 
     # Invoke apriori program
     print ""
+    RULES_PATH = "rules" + ''.join(apriori_args) + cipath + ".tmp"
     apriori_command = ['./apriori', '-tr', APRIORI_INPUT_PATH , RULES_PATH ] + apriori_args
     subprocess.call(apriori_command)
     print ""
@@ -224,7 +226,7 @@ def apriori_read_order_subsume( apriori_args, features_list, labels_list ):
 
 
 # Return rules learned from train_set
-def train_phase(train_set, apriori_args):
+def train_phase(train_set, apriori_args, cipath):
     train_features_list, train_labels_list = separateFeaturesAndLabels(train_set)
     subsumed_rules = []
     uncovered_features_list = train_features_list
@@ -233,7 +235,7 @@ def train_phase(train_set, apriori_args):
     while len(uncovered_features_list) > 100 and len(uncovered_features_list)!= prev_len and iteration < TOTAL_ITERATIONS:
         iteration += 1; prev_len = len(uncovered_features_list)
         subsumed_rules_temp, uncovered_features_list, uncovered_labels_list = \
-        apriori_read_order_subsume( apriori_args, uncovered_features_list, uncovered_labels_list )
+        apriori_read_order_subsume( apriori_args, uncovered_features_list, uncovered_labels_list, cipath )
         subsumed_rules += subsumed_rules_temp
         print "Dataset uncovered:", len(uncovered_features_list)
 
@@ -254,19 +256,26 @@ def test_phase(test_set, subsumed_rules_clusters, cluster_tms):
     test_features_list, test_labels_list = separateFeaturesAndLabels(test_set)
     test_features_clusters, test_labels_clusters = cc.cluster_test_set(test_features_list, test_labels_list, cluster_means)
 
+    predicted_labels_list1 = []
+    predicted_labels_list2 = []
+    test_labels_list_comb = []
     for idx in range(len(test_features_clusters)):
         test_features_list = test_features_clusters[idx]
         test_labels_list = test_labels_clusters[idx]
+        test_labels_list_comb += test_labels_list
         subsumed_rules = subsumed_rules_clusters[idx]
 
-        print "\nCluster Index:", idx
         predicted_labels_list = testRules(subsumed_rules, test_features_list)
-        getAccuracy(test_labels_list, predicted_labels_list)
-        getFmeasure(test_labels_list, predicted_labels_list)
+        predicted_labels_list1 += predicted_labels_list
 
         predicted_labels_list = testRulesWithVariableK(subsumed_rules, test_features_list, test_labels_list)
-        getAccuracy(test_labels_list, predicted_labels_list)
-        getFmeasure(test_labels_list, predicted_labels_list)
+        predicted_labels_list2 += predicted_labels_list
+        
+    getAccuracy(test_labels_list_comb, predicted_labels_list1)
+    getFmeasure(test_labels_list_comb, predicted_labels_list1)
+    
+    getAccuracy(test_labels_list_comb, predicted_labels_list2)
+    getFmeasure(test_labels_list_comb, predicted_labels_list2)
 
     print ""
 
@@ -294,7 +303,7 @@ def main(argv):
     start_time = timeit.default_timer()
     subsumed_rules_clusters = []                                    # Train
     for idx, train_set in enumerate(cluster_tms):                   #
-        subsumed_rules = train_phase(train_set, apriori_args)       #
+        subsumed_rules = train_phase(train_set, apriori_args, cipath)       #
         subsumed_rules_clusters.append(subsumed_rules)              #
     end_time = timeit.default_timer()
     print "Training Time:", str(end_time - start_time), "\n"
