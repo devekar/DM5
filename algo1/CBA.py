@@ -177,8 +177,12 @@ def getAccuracy(test_labels_list, predicted_labels_list):
 def getFmeasure(test_labels_list, predicted_labels_list):
     TP = 0; FN = 0; FP = 0;  # F-measure does not require TN, good for us :)
     for idx, labels in enumerate(predicted_labels_list):
-        if not labels: continue
         actual_labels = test_labels_list[idx]
+
+        if not labels: 
+            FN += len(actual_labels)
+            continue
+
 
         TP_temp = 0
         for label in labels:
